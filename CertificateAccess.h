@@ -18,5 +18,5 @@
 - (NSArray*)workingCertificateNames;
 - (NSString*)nameOfItem:(SecKeychainItemRef) item;
 - (NSArray*)availableCertificateNames;
-- (NSArray*)thirdPartyCertificatesInList:(NSArray*)certificateNames;
+- (NSArray*)developerCertificatesInList:(NSArray*)certificateNames;
 @end

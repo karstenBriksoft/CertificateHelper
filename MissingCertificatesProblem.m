@@ -26,7 +26,7 @@
 + (id)problemIfExists
 {
 	CertificateAccess* access = [CertificateAccess certificateAccess];
-	NSArray* allCertificates = [access thirdPartyCertificatesInList:[access availableCertificateNames]];
+	NSArray* allCertificates = [access developerCertificatesInList:[access availableCertificateNames]];
 
 	
 	MissingCertificatesProblem* problem = nil;

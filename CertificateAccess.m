@@ -99,9 +99,9 @@ OSStatus SecPolicyCopy(CSSM_CERT_TYPE certificateType, const CSSM_OID *policyOID
 	return result;
 }
 
-- (NSArray*)thirdPartyCertificatesInList:(NSArray*)certificateNames
+- (NSArray*)developerCertificatesInList:(NSArray*)certificateNames
 {
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith[s] '3rd'"];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith[cd] '3rd Party' OR SELF beginswith[cd] 'Mac Developer:' OR SELF beginswith[cd] 'iPhone Developer:'"];
 	return [certificateNames filteredArrayUsingPredicate:predicate];
 }
 @end

@@ -31,8 +31,8 @@
 + (id)problemIfExists
 {
 	CertificateAccess* access = [CertificateAccess certificateAccess];
-	NSArray* allCertificates = [access thirdPartyCertificatesInList:[access availableCertificateNames]];
-	NSArray* properCertificates = [access thirdPartyCertificatesInList:[access workingCertificateNames]];
+	NSArray* allCertificates = [access developerCertificatesInList:[access availableCertificateNames]];
+	NSArray* properCertificates = [access developerCertificatesInList:[access workingCertificateNames]];
 	NSMutableArray* array = [NSMutableArray array];
 	for (NSString* certificateName in allCertificates)
 	{
